@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putudec.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 22:27:08 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/25 23:27:40 by lagea            ###   ########.fr       */
+/*   Created: 2024/03/25 23:24:32 by lagea             #+#    #+#             */
+/*   Updated: 2024/03/25 23:27:33 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <unistd.h>
-#include <stdlib.h>
-
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putdec(long nb);
-void	ft_putudec(unsigned long n);
-
-#endif
+void	ft_putudec(unsigned long n)
+{
+	if (n / 10)
+	{
+		ft_putudec(n / 10);
+		ft_putudec(n % 10);
+	}
+	else
+		ft_putchar(n + '0');
+}

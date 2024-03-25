@@ -1,4 +1,4 @@
-SRCS = ft_putchar.c ft_putstr.c
+SRCS = ft_putchar.c ft_putstr.c ft_putdec.c ft_putudec.c
 
 OBJS = ${SRCS:.c=.o}
 DEPS = ${SRCS:.c=.d}
