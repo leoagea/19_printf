@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 22:27:08 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/25 22:40:26 by lagea            ###   ########.fr       */
+/*   Created: 2024/03/25 22:37:22 by lagea             #+#    #+#             */
+/*   Updated: 2024/03/25 22:48:52 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <unistd.h>
-#include <stdlib.h>
+void ft_putstr(char *str)
+{
+    size_t index;
 
-void	ft_putchar(char c);
-
-#endif
+    index = 0;
+    while(str[index])
+    {
+        ft_putchar(str[index]);
+        index++;
+    }
+}
