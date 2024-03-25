@@ -6,20 +6,20 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:37:22 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/25 22:48:52 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/25 22:53:53 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-    size_t index;
+	size_t	index;
 
-    index = 0;
-    while(str[index])
-    {
-        ft_putchar(str[index]);
-        index++;
-    }
+	index = 0;
+	while (str[index])
+	{
+		ft_putchar(str[index]);
+		index++;
+	}
 }
