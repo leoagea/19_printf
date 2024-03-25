@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_puthex_upper.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 22:27:08 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/25 23:57:00 by lagea            ###   ########.fr       */
+/*   Created: 2024/03/25 23:45:47 by lagea             #+#    #+#             */
+/*   Updated: 2024/03/25 23:56:50 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <unistd.h>
-#include <stdlib.h>
+void	ft_puthex_upper(int n)
+{
+	char	*base_16;
+	int		index;
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putdec(long nb);
-void	ft_putudec(unsigned long n);
-void	ft_puthex_lower(int n);
-void	ft_puthex_upper(int n);
-
-#endif
+	base_16 = "0123456789ABCDEF";
+	index = n % 16;
+	if (n / 16)
+	{
+		ft_puthex_upper(n / 16);
+		ft_putchar(base_16[index]);
+	}
+	else
+		ft_putchar(base_16[index]);
+}
