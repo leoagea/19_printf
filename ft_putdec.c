@@ -6,13 +6,13 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:53:32 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/25 23:24:10 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/26 00:53:26 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putdec(long nb)
+size_t	ft_putdec(long nb)
 {
 	if (nb < 0)
 	{
@@ -25,5 +25,6 @@ void	ft_putdec(long nb)
 		ft_putdec(nb % 10);
 	}
 	else
-		ft_putchar(nb + '0');
+		return ft_putchar(nb + '0');
+	return 1;
 }

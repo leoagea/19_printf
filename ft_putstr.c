@@ -6,13 +6,13 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:37:22 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/25 23:13:45 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/26 00:53:57 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *str)
+size_t	ft_putstr(char *str)
 {
 	size_t	index;
 
@@ -24,4 +24,5 @@ void	ft_putstr(char *str)
 		ft_putchar(str[index]);
 		index++;
 	}
+	return index;
 }
