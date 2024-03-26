@@ -3,7 +3,6 @@ SRCS = ft_putchar.c ft_putstr.c ft_putdec.c ft_putudec.c \
 		ft_printf.c
 
 OBJS = ${SRCS:.c=.o}
-DEPS = ${SRCS:.c=.d}
 
 LIB = libftprintf.a
 
@@ -20,13 +19,11 @@ ${LIB}:	${OBJS}
 all: 	${LIB}
 
 clean:	
-		rm -f ${OBJS} ${DEPS}
+		rm -f ${OBJS} 
 
 fclean:	clean;
 		rm -f ${LIB}
 
 re:	fclean all
-
--include ${DEPS}
 
 .PHONY: all clean fclean re 
