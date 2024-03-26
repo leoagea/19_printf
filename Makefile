@@ -1,5 +1,6 @@
 SRCS = ft_putchar.c ft_putstr.c ft_putdec.c ft_putudec.c \
-		ft_puthex_lower.c ft_puthex_upper.c ft_putadd.c
+		ft_puthex_lower.c ft_puthex_upper.c ft_putadd.c \
+		ft_printf.c
 
 OBJS = ${SRCS:.c=.o}
 DEPS = ${SRCS:.c=.d}
