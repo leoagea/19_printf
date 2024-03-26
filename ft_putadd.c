@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 00:01:34 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/26 00:46:06 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/26 01:33:54 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ size_t	ft_putadd(void *add)
 	if (!add)
 		ft_putstr("(null)");
 	ft_putstr("0x");
-	return ft_puthex_lower((long)add);
+	return (ft_puthex_lower((long)add));
 }

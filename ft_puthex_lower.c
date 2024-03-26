@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 23:29:19 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/26 00:53:39 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/26 01:34:33 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ size_t	ft_puthex_lower(long n)
 		ft_putchar(base_16[index]);
 	}
 	else
-		return ft_putchar(base_16[index]);
-	return 1;
+		return (ft_putchar(base_16[index]));
+	return (1);
 }
