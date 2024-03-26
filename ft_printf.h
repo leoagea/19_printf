@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 22:27:08 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/26 01:33:33 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/27 00:22:38 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+int	ft_printf(const char *str, ...);
 
 size_t	ft_putchar(char c);
 size_t	ft_putstr(char *str);
