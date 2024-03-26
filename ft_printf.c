@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 00:14:35 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/26 01:33:45 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/26 02:46:11 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	call_fonction(va_list *ap, const char *str, size_t *index)
 		else if (*(str + 1) == 's')
 			return (ft_putstr(va_arg(*ap, char *)));
 		else if (*(str + 1) == 'p')
-			return (ft_putadd(va_arg(*ap, size_t *)));
+			return (ft_putadd(va_arg(*ap, void *)));
 		else if (*(str + 1) == 'd')
 			return (ft_putdec(va_arg(*ap, long)));
 		else if (*(str + 1) == 'i')
