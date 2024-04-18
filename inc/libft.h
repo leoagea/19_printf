@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 22:09:14 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/19 00:00:36 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
-void				ft_putnbr_fd(int n, int fd);
+void				ft_put_nbr_fd(int n, int fd);
+void				ft_put_unbr_fd(unsigned int n, int fd);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /*Partie bonus*/
