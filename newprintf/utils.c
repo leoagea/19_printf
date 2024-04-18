@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:27:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 23:50:01 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/19 00:09:53 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	print_string(char *s)
 
 int	print_decimal(int n)
 {
-	ft_putnbr_fd(n, 1);
+	ft_put_nbr_fd(n, 1);
 	return (1);
 }
 
@@ -81,7 +81,9 @@ int	main(void)
 	char *s = NULL;
 	char *s1 = "\nTest\n";
 	long long n = -9223372036854775807;
-	int nb = 1010;
+	// unsigned int nb = 4294967295;
+	unsigned int nb = -10;
+
 
 	// // printf("\n%p\n",&s);
 	// printf("\n%p\n",&n);
@@ -99,5 +101,6 @@ int	main(void)
 	// printf("\n");
 	// printf("%d", print_hex_upper((int)nb));
 
-	
+	// printf("\n%u",nb);
+	print_udecimal(nb);
 }
