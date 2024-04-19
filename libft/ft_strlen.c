@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 02:04:14 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 22:11:49 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/19 13:03:25 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlen(const char *s)
 
 	len = 0;
 	if (!s)
-		return (NULL);
+		return (0);
 	while (s[len] != '\0')
 		len++;
 	return (len);
