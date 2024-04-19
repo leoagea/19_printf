@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:27:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/19 18:17:07 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/19 23:08:24 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,38 +76,38 @@ int	print_hex_upper(unsigned int n)
 	return (0);
 }
 
-int	main(void)
-{
-	// char *s = NULL;
-	// char *s1 = "\nTest\n";
-	// long long n = -9223372036854775807;
-	// // unsigned int nb = 4294967295;
-	// unsigned int nb = -10;
+// int	main(void)
+// {
+// 	// char *s = NULL;
+// 	// char *s1 = "\nTest\n";
+// 	// long long n = -9223372036854775807;
+// 	// // unsigned int nb = 4294967295;
+// 	// unsigned int nb = -10;
 
 
-	// // printf("\n%p\n",&s);
-	// printf("\n%p\n",&n);
-	// // print_add(&s);
-	// print_add(&n);
+// 	// // printf("\n%p\n",&s);
+// 	// printf("\n%p\n",&n);
+// 	// // print_add(&s);
+// 	// print_add(&n);
 
-	// printf("%s\n",s);
-	// printf("%s\n",s1);
-	// print_string(s);
-	// print_string(s1);
+// 	// printf("%s\n",s);
+// 	// printf("%s\n",s1);
+// 	// print_string(s);
+// 	// print_string(s1);
 	
-	// printf("\n");
-	// printf("%d", print_hex_lower((int)nb));
+// 	// printf("\n");
+// 	// printf("%d", print_hex_lower((int)nb));
 
-	// printf("\n");
-	// printf("%d", print_hex_upper((int)nb));
+// 	// printf("\n");
+// 	// printf("%d", print_hex_upper((int)nb));
 
-	// printf("\n%u",nb);
-	// print_udecimal(nb);
+// 	// printf("\n%u",nb);
+// 	// print_udecimal(nb);
 
-	// printf("%5.3d \n%-d\n", -10, 15);
-	// printf("%d\n", print_string("Test"));
+// 	// printf("%5.3d \n%-d\n", -10, 15);
+// 	// printf("%d\n", print_string("Test"));
 
-	/*printf("\n%d\n",*/
-	printf("%X\n", (unsigned int) -2147483647);
-	print_hex_upper((unsigned int) 2147483647);
-}
+// 	/*printf("\n%d\n",*/
+// 	printf("%X\n", (unsigned int) -2147483647);
+// 	print_hex_upper((unsigned int) 2147483647);
+// }

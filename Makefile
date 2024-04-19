@@ -1,29 +1,45 @@
-SRCS = ft_putchar.c ft_putstr.c ft_putdec.c ft_putudec.c \
-		ft_puthex_lower.c ft_puthex_upper.c ft_putadd.c \
-		ft_printf.c
-
-OBJS = ${SRCS:.c=.o}
-
-LIB = libftprintf.a
-
+# Define compiler
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -I ./
+# Define compiler flags
+CFLAGS = -Wall -Wextra -Werror
 
-.c.o:
-		${CC} ${CFLAGS} -MMD -c $< -o ${<:.c=.o}
+# Define source directory, object directory, and libft directory
+SRCDIR = src
+OBJDIR = obj
+LIBFTDIR = libft
 
-${LIB}:	${OBJS}
-		ar -rsc ${LIB} ${OBJS}
+# Automatically find all .c files in SRCDIR and define their .o counterparts in OBJDIR
+SRC = $(shell ls $(SRCDIR)/*.c)
+OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
-all: 	${LIB}
+# Define the library name
+LIBNAME = printf.a
 
-clean:	
-		rm -f ${OBJS} 
+# Include path for libft (if needed)
+INCLUDES = -I$(LIBFTDIR)/inc
 
-fclean:	clean;
-		rm -f ${LIB}
+# First rule is the one executed when no parameters are fed to the Makefile
+all: $(LIBNAME)
 
-re:	fclean all
+# Rule to make the library
+$(LIBNAME): $(OBJ)
+	mkdir -p $(OBJDIR)
+	ar rcs $(LIBNAME) $(OBJ)
 
-.PHONY: all clean fclean re 
+# This rule says how to make an .o file out of a .c file
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+# Clean objects in object directory and the library
+clean:
+	rm -rf $(OBJDIR)/*.o
+
+fclean : clean
+	rm -f $(LIBNAME)
+
+# Rebuild everything
+re: clean all
+
+# This is a special target that tells make that 'clean' and 're' are not files
+.PHONY: all clean re
