@@ -14,7 +14,7 @@ SRC = $(shell ls $(SRCDIR)/*.c)
 OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 # Define the library name
-LIBNAME = printf.a
+LIBNAME = libftprintf.a
 
 # Include path for libft (if needed)
 INCLUDES = -I$(LIBFTDIR)/inc
