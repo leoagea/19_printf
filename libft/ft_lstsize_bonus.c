@@ -6,11 +6,11 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 23:23:35 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 16:35:40 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 15:39:06 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

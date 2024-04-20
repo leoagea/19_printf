@@ -6,11 +6,12 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:29:34 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 16:34:06 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 15:38:07 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*res;

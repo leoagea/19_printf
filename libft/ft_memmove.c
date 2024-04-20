@@ -6,11 +6,11 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:42:10 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 16:35:50 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 15:39:29 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   utils_len.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 19:25:36 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 15:38:33 by lagea            ###   ########.fr       */
+/*   Created: 2024/04/20 13:27:07 by lagea             #+#    #+#             */
+/*   Updated: 2024/04/20 16:50:56 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
+#include "inc/ft_printf.h"
 
-static int	int_len(long n)
+int	int_len(long n)
 {
 	size_t	len_nbr;
 
@@ -32,31 +33,30 @@ static int	int_len(long n)
 	return (len_nbr);
 }
 
-char	*ft_itoa(int n)
+int	add_len(void *add)
 {
-	size_t	len_nbr;
-	long	cast_n;
-	int		is_neg;
-	char	*nbr;
+	int len;
+	long addr;
 
-	is_neg = 0;
-	cast_n = (long)n;
-	len_nbr = int_len((long)n);
-	nbr = (char *)malloc((len_nbr + 1) * sizeof(char));
-	if (!nbr)
-		return (NULL);
-	if (n < 0)
+	addr = (long)add;
+	len = 1;
+	while (addr / 16)
 	{
-		cast_n = -cast_n;
-		nbr[0] = '-';
-		is_neg = 1;
+		len++;
+		addr = addr / 16;
 	}
-	nbr[len_nbr] = '\0';
-	while (len_nbr > (size_t)is_neg)
+	return (len);
+}
+
+int	hex_len(unsigned int hex)
+{
+	int len;
+
+	len = 1;
+	while (hex / 16)
 	{
-		nbr[len_nbr - 1] = (cast_n % 10) + 48;
-		cast_n /= 10;
-		len_nbr--;
+		len++;
+		hex = hex / 16;
 	}
-	return (nbr);
+	return (len);
 }
