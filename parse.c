@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:36 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 15:02:56 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 19:29:54 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int	parse_printf(const char *s, int index, va_list *par)
 	else if (s[index + 1] == '%')
 		return (write(1, "%", 1));
 	else
-		return (0);
+		return (-1);
 }

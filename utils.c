@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:27:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 19:21:53 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 19:45:38 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	print_string(char *s)
 
 	i = -1;
 	if (!s)
-		print_string("(null)");
+		return print_string("(null)");
 	else if (s[0] == '\0')
 		return 0;
 	else
@@ -36,7 +36,7 @@ int	print_string(char *s)
 			if (ft_isprint((char)s[i]))
 				write(1, &s[i], 1);
 			else
-				return (0);
+				return (-1);
 		}
 	}
 	return (ft_strlen(s));

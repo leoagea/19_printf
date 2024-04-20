@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:25 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 19:23:08 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 19:48:56 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,12 @@ int ft_printf(const char *s, ...)
 	{
 		if (s[index] == '%')
 		{
-			if ((temp = parse_printf(s,index,&arg)) != 0)
-			{
+			if ((temp = parse_printf(s,index,&arg)) != -1)
 				index++;
-			}
 		}
 		else
 			temp = print_char(s[index]);
-		if (temp == 0)
+		if (temp == -1)
 			len += 1;
 		else 
 			len += temp;
@@ -47,9 +45,9 @@ int ft_printf(const char *s, ...)
 
 int main()
 {
-	int res = ft_printf(" %s", "");
+	int res = ft_printf("%s", "");
 	printf("\n");
-	int res1 = printf(" %s", "");
+	int res1 = printf("%s", "");
 
 	printf("\nres : %d\tres1 : %d\n",res,res1);
 
