@@ -6,12 +6,13 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:25 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 19:48:56 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 20:23:17 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "inc/ft_printf.h"
 #include "libft/libft.h"
+#include "limits.h"
 
 int ft_printf(const char *s, ...)
 {
@@ -45,11 +46,11 @@ int ft_printf(const char *s, ...)
 
 int main()
 {
-	int res = ft_printf("%s", "");
+	// int res = ft_printf(" %p %p ", LONG_MIN, LONG_MAX);
 	printf("\n");
-	int res1 = printf("%s", "");
+	int res1 = printf(" %p %p ", (void *) LONG_MIN,(void *)LONG_MAX);
 
-	printf("\nres : %d\tres1 : %d\n",res,res1);
+	// printf("\nres : %d\tres1 : %d\n",res,res1);
 
 	// ft_putchar_fd(0,1);
 }

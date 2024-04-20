@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 23:42:38 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 16:50:59 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 20:35:56 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	print_hex_add(long n)
 		if (print_hex_add((long)n / 16))
 			return (print_char(base_16[n % 16]));
 	}
-	return (0);
+	return (-1);
 }
 
 int	print_add(void *add)
@@ -38,5 +38,5 @@ int	print_add(void *add)
 int	print_udecimal(unsigned int n)
 {
 	ft_put_unbr_fd(n, 1);
-	return (1);
+	return (int_len((unsigned int) n));
 }
