@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:27:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 13:05:10 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 13:34:25 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ int	print_hex_lower(unsigned int n)
 	else
 	{
 		if (print_hex_lower(((unsigned int)n / 16)))
-			return (print_char(base_16[n % 16]));
+			print_char(base_16[n % 16]);
 	}
-	return (0);
+	return (hex_len(n));
 }
 
 int	print_hex_upper(unsigned int n)
@@ -70,9 +70,9 @@ int	print_hex_upper(unsigned int n)
 	else
 	{
 		if (print_hex_upper(n / 16))
-			return (print_char(base_16[(unsigned int)n % 16]));
+			print_char(base_16[(unsigned int)n % 16]);
 	}
-	return (0);
+	return (hex_len(n));
 }
 
 // int	main(void)

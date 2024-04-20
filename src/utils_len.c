@@ -1,42 +1,62 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_2.c                                          :+:      :+:    :+:   */
+/*   utils_len.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 23:42:38 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 13:27:04 by lagea            ###   ########.fr       */
+/*   Created: 2024/04/20 13:27:07 by lagea             #+#    #+#             */
+/*   Updated: 2024/04/20 13:31:27 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 #include "../inc/printf.h"
 
-int	print_hex_add(long n)
+int	int_len(long n)
 {
-	char	*base_16;
+	size_t	len_nbr;
 
-	base_16 = "0123456789abcdef";
-	if (n < 16)
-		return (print_char(base_16[n]));
-	else
+	len_nbr = 0;
+	if (n < 0)
 	{
-		if (print_hex_add((long)n / 16))
-			return (print_char(base_16[n % 16]));
+		n = -n;
+		len_nbr = 1;
 	}
-	return (0);
+	else if (n == 0)
+		len_nbr = 1;
+	while (n != 0)
+	{
+		n /= 10;
+		len_nbr++;
+	}
+	return (len_nbr);
 }
 
-int	print_add(void *add)
+int	add_len(void *add)
 {
-	print_string("0x");
-	print_hex_add((long)add);
-	return (add_len(add) + 2);
+	int len;
+	long addr;
+
+	addr = (long)add;
+	len = 1;
+	while (addr / 16)
+	{
+		len++;
+		addr = addr / 16;
+	}
+	return (len);
 }
 
-int	print_udecimal(unsigned int n)
+int	hex_len(unsigned int hex)
 {
-	ft_put_unbr_fd(n, 1);
-	return (1);
+	int len;
+
+	len = 1;
+	while (hex / 16)
+	{
+		len++;
+		hex = hex / 16;
+	}
+	return (len);
 }

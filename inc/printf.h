@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:37:15 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 13:20:29 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 13:30:02 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,12 @@ int	print_hex_upper(unsigned int n);
 /* Utils_2 */
 int	print_udecimal(unsigned int n);
 int	print_add(void *add);
-int	int_len(long n);
 int	print_hex_add(long n);
-int add_len(void *add);
+
+/* Utils_len */
+int	int_len(long n);
+int	add_len(void *add);
+int	hex_len(unsigned int hex);
 
 /* Parse */
 int	parse_printf(const char *s, int index, va_list *par);
