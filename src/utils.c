@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:27:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/19 23:08:24 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 13:05:10 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int	print_decimal(int n)
 int	print_hex_lower(unsigned int n)
 {
 	char	*base_16;
-
 	base_16 = "0123456789abcdef";
 	if (n < 16)
 		return (print_char(base_16[n]));

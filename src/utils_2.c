@@ -6,17 +6,33 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 23:42:38 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/19 15:26:45 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 13:23:07 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/printf.h"
 #include "../inc/libft.h"
+#include "../inc/printf.h"
+
+int	print_hex_add(long n)
+{
+	char	*base_16;
+
+	base_16 = "0123456789abcdef";
+	if (n < 16)
+		return (print_char(base_16[n]));
+	else
+	{
+		if (print_hex_add((long)n / 16))
+			return (print_char(base_16[n % 16]));
+	}
+	return (0);
+}
 
 int	print_add(void *add)
 {
 	print_string("0x");
-	return (print_hex_lower((long)add));
+	print_hex_add((long)add);
+	return (add_len(add) + 2);
 }
 
 int	print_udecimal(unsigned int n)
@@ -43,4 +59,19 @@ int	int_len(long n)
 		len_nbr++;
 	}
 	return (len_nbr);
+}
+
+int	add_len(void *add)
+{
+	int len;
+	long addr;
+
+	addr = (long)add;
+	len = 1;
+	while (addr / 16)
+	{
+		len++;
+		addr = addr / 16;
+	}
+	return (len);
 }
