@@ -6,11 +6,12 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:25 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 16:52:48 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 19:23:08 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "inc/ft_printf.h"
+#include "libft/libft.h"
 
 int ft_printf(const char *s, ...)
 {
@@ -44,10 +45,15 @@ int ft_printf(const char *s, ...)
 	return len;
 }
 
-// int main()
-// {
-// 	printf("%d",ft_printf("Test de printf :%s\n","Autre"));
-// 	// printf("%d", printf("%d ",1000));
-// }
+int main()
+{
+	int res = ft_printf(" %s", "");
+	printf("\n");
+	int res1 = printf(" %s", "");
+
+	printf("\nres : %d\tres1 : %d\n",res,res1);
+
+	// ft_putchar_fd(0,1);
+}
 
 // cc printf.c parse.c utils.c utils_2.c ../libft/libft.a ; ./a.out
