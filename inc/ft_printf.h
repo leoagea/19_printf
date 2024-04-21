@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:37:15 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/21 22:14:25 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/21 22:17:00 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 /* Utils */
 int	ft_print_char(char c);
-int	ft_print_string(char *s);
+int	ft_print_string(const char *s);
 int	ft_print_decimal(int n);
 int	ft_print_hex_lower(unsigned int n);
 int	ft_print_hex_upper(unsigned int n);

@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:27:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/21 22:13:33 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/21 22:17:09 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_print_char(char c)
 	return (0);
 }
 
-int	ft_print_string(char *s)
+int	ft_print_string(const char *s)
 {
 	int	i;
 
