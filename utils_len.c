@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   utils_len.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 13:27:07 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 16:50:56 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/21 22:12:59 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "inc/ft_printf.h"
 
-int	int_len(long n)
+int	ft_int_len(long n)
 {
 	size_t	len_nbr;
 
@@ -33,22 +33,22 @@ int	int_len(long n)
 	return (len_nbr);
 }
 
-int	add_len(void *add)
+int	ft_add_len(unsigned long add)
 {
 	int len;
-	long addr;
+	// long addr;
 
-	addr = (long)add;
+	// addr = (long)add;
 	len = 1;
-	while (addr / 16)
+	while (add / 16)
 	{
 		len++;
-		addr = addr / 16;
+		add = add / 16;
 	}
 	return (len);
 }
 
-int	hex_len(unsigned int hex)
+int	ft_hex_len(unsigned int hex)
 {
 	int len;
 

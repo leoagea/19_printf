@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printf.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:25 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 20:23:17 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/21 22:13:43 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int ft_printf(const char *s, ...)
 	{
 		if (s[index] == '%')
 		{
-			if ((temp = parse_printf(s,index,&arg)) != -1)
+			if ((temp = ft_parse_printf(s,index,&arg)) != -1)
 				index++;
 		}
 		else
-			temp = print_char(s[index]);
+			temp = ft_print_char(s[index]);
 		if (temp == -1)
 			len += 1;
 		else 
@@ -44,15 +44,15 @@ int ft_printf(const char *s, ...)
 	return len;
 }
 
-int main()
-{
-	// int res = ft_printf(" %p %p ", LONG_MIN, LONG_MAX);
-	printf("\n");
-	int res1 = printf(" %p %p ", (void *) LONG_MIN,(void *)LONG_MAX);
+// int main()
+// {
+// 	// int res = ft_printf(" %p %p ", LONG_MIN, LONG_MAX);
+// 	printf("\n");
+// 	int res1 = printf(" %p %p ", (void *) LONG_MIN,(void *)LONG_MAX);
 
-	// printf("\nres : %d\tres1 : %d\n",res,res1);
+// 	// printf("\nres : %d\tres1 : %d\n",res,res1);
 
-	// ft_putchar_fd(0,1);
-}
+// 	// ft_putchar_fd(0,1);
+// }
 
 // cc printf.c parse.c utils.c utils_2.c ../libft/libft.a ; ./a.out

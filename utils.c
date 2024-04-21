@@ -3,30 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:27:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 19:45:38 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/21 22:13:33 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "inc/ft_printf.h"
 
-int	print_char(char c)
+int	ft_print_char(char c)
 {
 	if (ft_isascii((int) c))
 		return (write(1, &c, 1));
 	return (0);
 }
 
-int	print_string(char *s)
+int	ft_print_string(char *s)
 {
 	int	i;
 
 	i = -1;
 	if (!s)
-		return print_string("(null)");
+		return ft_print_string("(null)");
 	else if (s[0] == '\0')
 		return 0;
 	else
@@ -42,39 +42,39 @@ int	print_string(char *s)
 	return (ft_strlen(s));
 }
 
-int	print_decimal(int n)
+int	ft_print_decimal(int n)
 {
 	ft_put_nbr_fd(n, 1);
-	return (int_len((int)n));
+	return (ft_int_len((int)n));
 }
 
-int	print_hex_lower(unsigned int n)
+int	ft_print_hex_lower(unsigned int n)
 {
 	char	*base_16;
 	base_16 = "0123456789abcdef";
 	if (n < 16)
-		return (print_char(base_16[n]));
+		return (ft_print_char(base_16[n]));
 	else
 	{
-		if (print_hex_lower(((unsigned int)n / 16)))
-			print_char(base_16[n % 16]);
+		if (ft_print_hex_lower(((unsigned int)n / 16)))
+			ft_print_char(base_16[n % 16]);
 	}
 	return (hex_len(n));
 }
 
-int	print_hex_upper(unsigned int n)
+int	ft_print_hex_upper(unsigned int n)
 {
 	char	*base_16;
 
 	base_16 = "0123456789ABCDEF";
 	if (n < 16)
-		return (print_char(base_16[n]));
+		return (ft_print_char(base_16[n]));
 	else
 	{
-		if (print_hex_upper(n / 16))
-			print_char(base_16[(unsigned int)n % 16]);
+		if (ft_print_hex_upper(n / 16))
+			ft_print_char(base_16[(unsigned int)n % 16]);
 	}
-	return (hex_len(n));
+	return (ft_hex_len(n));
 }
 
 // int	main(void)

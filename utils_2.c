@@ -3,40 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   utils_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 23:42:38 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 20:35:56 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/21 22:12:46 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "inc/ft_printf.h"
 
-int	print_hex_add(long n)
+int	ft_print_hex_add(unsigned long n)
 {
 	char	*base_16;
 
 	base_16 = "0123456789abcdef";
 	if (n < 16)
-		return (print_char(base_16[n]));
+		return (ft_print_char(base_16[n]));
 	else
 	{
-		if (print_hex_add((long)n / 16))
-			return (print_char(base_16[n % 16]));
+		if (ft_print_hex_add((unsigned long)n / 16))
+			return (ft_print_char(base_16[n % 16]));
 	}
 	return (-1);
 }
 
-int	print_add(void *add)
+int	ft_print_add(unsigned long add)
 {
-	print_string("0x");
-	print_hex_add((long)add);
-	return (add_len(add) + 2);
+	ft_print_string("0x");
+	ft_print_hex_add(add);
+	return (ft_add_len(add) + 2);
 }
 
-int	print_udecimal(unsigned int n)
+int	ft_print_udecimal(unsigned int n)
 {
 	ft_put_unbr_fd(n, 1);
-	return (int_len((unsigned int) n));
+	return (ft_int_len((unsigned int) n));
 }

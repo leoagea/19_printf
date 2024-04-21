@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:37:15 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 15:02:51 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/21 22:14:25 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,24 @@
 # include <stdio.h>
 
 /* Utils */
-int	print_char(char c);
-int	print_string(char *s);
-int	print_decimal(int n);
-int	print_hex_lower(unsigned int n);
-int	print_hex_upper(unsigned int n);
+int	ft_print_char(char c);
+int	ft_print_string(char *s);
+int	ft_print_decimal(int n);
+int	ft_print_hex_lower(unsigned int n);
+int	ft_print_hex_upper(unsigned int n);
 
 /* Utils_2 */
-int	print_udecimal(unsigned int n);
-int	print_add(void *add);
-int	print_hex_add(long n);
+int	ft_print_udecimal(unsigned int n);
+int	ft_print_add(unsigned long add);
+int	ft_print_hex_add(unsigned long n);
 
 /* Utils_len */
-int	int_len(long n);
-int	add_len(void *add);
-int	hex_len(unsigned int hex);
+int	ft_int_len(long n);
+int	ft_add_len(unsigned long add);
+int	ft_hex_len(unsigned int hex);
 
 /* Parse */
-int	parse_printf(const char *s, int index, va_list *par);
+int	ft_parse_printf(const char *s, int index, va_list *par);
 
 /* Printf */
 int ft_printf(const char *s, ...);
