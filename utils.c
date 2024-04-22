@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:27:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/21 22:17:09 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/22 15:24:44 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_print_char(char c)
 {
-	if (ft_isascii((int) c))
+	if (ft_isascii((int) c / 255))
 		return (write(1, &c, 1));
 	return (0);
 }
@@ -59,7 +59,7 @@ int	ft_print_hex_lower(unsigned int n)
 		if (ft_print_hex_lower(((unsigned int)n / 16)))
 			ft_print_char(base_16[n % 16]);
 	}
-	return (hex_len(n));
+	return (ft_hex_len(n));
 }
 
 int	ft_print_hex_upper(unsigned int n)
