@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:37:15 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/21 22:17:00 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/22 15:14:00 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ int	ft_add_len(unsigned long add);
 int	ft_hex_len(unsigned int hex);
 
 /* Parse */
-int	ft_parse_printf(const char *s, int index, va_list *par);
+int	ft_check_next_char(const char *s, int index);
+int	ft_parse_printf(const char *s, int index, va_list par);
 
 /* Printf */
 int ft_printf(const char *s, ...);

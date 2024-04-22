@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printf.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:25 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/21 22:13:43 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/22 15:15:40 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,41 +16,37 @@
 
 int ft_printf(const char *s, ...)
 {
-	int len;
+	// int len;
 	int temp;
 	int index;
 	va_list arg;
 
-	len = 0;
+	// len = 0;
 	temp = 0;
 	index = 0;
 	va_start(arg,s);
 	while (s[index])
 	{
-		if (s[index] == '%')
+		if (s[index] == '%' && ft_check_next_char(s, index))
 		{
-			if ((temp = ft_parse_printf(s,index,&arg)) != -1)
-				index++;
+			temp += ft_parse_printf(s,index, arg);
+			index++;
 		}
 		else
-			temp = ft_print_char(s[index]);
-		if (temp == -1)
-			len += 1;
-		else 
-			len += temp;
+			temp += ft_print_char(s[index]);
 		index++;
 	}
 	va_end(arg);
-	return len;
+	return temp;
 }
 
 // int main()
 // {
-// 	// int res = ft_printf(" %p %p ", LONG_MIN, LONG_MAX);
+// 	int res = ft_printf("7V%d;7I#7stzo%%%d%XxQyB\r%cz^%c?CaJ\nNcl?", -1553747769, 1553655994, 1950551726,-1176848849, -1900883211);
 // 	printf("\n");
-// 	int res1 = printf(" %p %p ", (void *) LONG_MIN,(void *)LONG_MAX);
+// 	int res1 = printf("7V%d;7I#7stzo%%%d%XxQyB\r%cz^%c?CaJ\nNcl?", -1553747769, 1553655994, 1950551726,-1176848849, -1900883211);
 
-// 	// printf("\nres : %d\tres1 : %d\n",res,res1);
+// 	printf("\nres : %d\tres1 : %d\n",res,res1);
 
 // 	// ft_putchar_fd(0,1);
 // }
