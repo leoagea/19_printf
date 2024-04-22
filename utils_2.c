@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   utils_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 23:42:38 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/21 22:12:46 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/22 16:56:38 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "inc/ft_printf.h"
+#include "libft/libft.h"
 
 int	ft_print_hex_add(unsigned long n)
 {
@@ -38,5 +38,5 @@ int	ft_print_add(unsigned long add)
 int	ft_print_udecimal(unsigned int n)
 {
 	ft_put_unbr_fd(n, 1);
-	return (ft_int_len((unsigned int) n));
+	return (ft_int_len((unsigned int)n));
 }

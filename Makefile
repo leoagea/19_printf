@@ -12,8 +12,6 @@ all: $(NAME)
 
 makelibft:
 	@make -C $(LIBFTDIR)
-	@cp $(LIBFTDIR)/$(LIBFTNAME) .
-	@mv $(LIBFTNAME) $(NAME)
 
 $(NAME): makelibft $(OBJS)
 	@ar -r $(NAME) $(OBJS)

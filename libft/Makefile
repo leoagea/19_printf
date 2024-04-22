@@ -29,7 +29,7 @@ GCC			= gcc
 
 CFLAGS		= -Wall -Wextra -Werror
 
-all:		${NAME} clean
+all:		${NAME} 
 
 .c.o:
 			${GCC} ${CFLAGS} -c -I ${HEAD} $< -o ${<:.c=.o}

@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:36 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/22 15:08:00 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/22 16:57:55 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_check_next_char(const char *s, int index)
 	else if (s[index] == 'i' || s[index] == 'd' || s[index] == '%')
 		return (1);
 	else if ((s[index] == 'u' || s[index] == 'x' || s[index] == 'X'))
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }
 
 int	ft_parse_printf(const char *s, int index, va_list par)
