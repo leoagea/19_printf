@@ -6,41 +6,37 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 23:42:38 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/19 15:26:45 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/26 17:27:30 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/printf.h"
-#include "../inc/libft.h"
+#include "../inc/ft_printf.h"
+#include "../libft/libft.h"
 
-int	print_add(void *add)
+int	ft_print_hex_add(unsigned long n)
 {
-	print_string("0x");
-	return (print_hex_lower((long)add));
+	char	*base_16;
+
+	base_16 = "0123456789abcdef";
+	if (n < 16)
+		return (ft_print_char(base_16[n]));
+	else
+	{
+		if (ft_print_hex_add((unsigned long)n / 16))
+			return (ft_print_char(base_16[n % 16]));
+	}
+	return (-1);
 }
 
-int	print_udecimal(unsigned int n)
+int	ft_print_add(unsigned long add)
+{
+	ft_print_string("0x");
+	ft_print_hex_add(add);
+	return (ft_add_len(add) + 2);
+}
+
+int	ft_print_udecimal(unsigned int n)
 {
 	ft_put_unbr_fd(n, 1);
-	return (1);
-}
-
-int	int_len(long n)
-{
-	size_t	len_nbr;
-
-	len_nbr = 0;
-	if (n < 0)
-	{
-		n = -n;
-		len_nbr = 1;
-	}
-	else if (n == 0)
-		len_nbr = 1;
-	while (n != 0)
-	{
-		n /= 10;
-		len_nbr++;
-	}
-	return (len_nbr);
+	return (ft_int_len((unsigned int)n));
 }

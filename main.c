@@ -1,6 +1,6 @@
 #include <stdio.h>  // Standard I/O
-#include "./inc/libft.h"      // For the libft header
-#include "./inc/printf.h" // For the printf header
+#include "./libft/libft.h"      // For the libft header
+#include "./inc/ft_printf.h" // For the printf header
 
 // int main(void)
 // {
@@ -342,4 +342,6 @@ int main()
     test_u();
     test_X();
     test_x();
+	// printf("  Or\t:\t%%, %i, %c, %s\n", 50, 'a', NULL);
+	// printf("  Ft\t:\t%%, %i, %c, %s\n", 50, 'a', NULL);
 }

@@ -6,11 +6,11 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:40:54 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 16:36:29 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 15:41:05 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {

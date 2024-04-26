@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_unbr_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 21:34:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/19 00:00:08 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 20:04:36 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
-static void	print_nb(long n, int fd)
+static void	print_nb(unsigned int n, int fd)
 {
 	if (n / 10)
 	{

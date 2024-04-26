@@ -6,11 +6,11 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 02:24:29 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 16:36:42 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 15:41:29 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:45:42 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 22:11:12 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 15:39:10 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

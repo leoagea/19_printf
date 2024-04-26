@@ -1,45 +1,71 @@
-# Define compiler
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lagea <lagea@student.s19.be>               +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/04/26 17:35:27 by lagea             #+#    #+#              #
+#    Updated: 2024/04/26 17:48:23 by lagea            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+RED=\033[0;31m
+GREEN=\033[0;32m
+YELLOW=\033[1;33m
+BLUE=\033[0;34m
+ORANGE=\033[38;2;255;165;0m
+NC=\033[0m
+
+NAME = libftprintf.a
+
+SRC_DIR = src/
+OBJ_DIR = obj/
+INC_DIR = inc/
+LIB_DIR = lib/
+LIBNAME = $(LIB_DIR)$(NAME)
+
+SRC = src/printf.c src/parse.c  src/utils.c src/utils_2.c src/utils_len.c
+OBJ = $(SRC:$(SRC_DIR)%.c=$(OBJ_DIR)%.o)
+
+
+LIBFT 		= libft/libft.a
+LIBFT_PATH 	= libft/
+
 CC = gcc
-
-# Define compiler flags
+RM	= rm -f
 CFLAGS = -Wall -Wextra -Werror
+INCS = -I$(INC_DIR) -I.
 
-# Define source directory, object directory, and libft directory
-SRCDIR = src
-OBJDIR = obj
-LIBFTDIR = libft
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+	@mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) $(INCS) -c $< -o $@
 
-# Automatically find all .c files in SRCDIR and define their .o counterparts in OBJDIR
-SRC = $(shell ls $(SRCDIR)/*.c)
-OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+all: $(LIBFT) $(NAME)
 
-# Define the library name
-LIBNAME = libftprintf.a
+$(NAME): $(OBJ)
+	@echo "$(GREEN)Creating ft_printf library $(LIBNAME)...$(NC)"
+	@mkdir -p $(LIB_DIR)
+	@ar rc $(LIBNAME) $(OBJ)
+	@echo "$(BLUE)Library ft_printf created!$(NC)"
 
-# Include path for libft (if needed)
-INCLUDES = -I$(LIBFTDIR)/inc
-
-# First rule is the one executed when no parameters are fed to the Makefile
-all: $(LIBNAME)
-
-# Rule to make the library
-$(LIBNAME): $(OBJ)
-	mkdir -p $(OBJDIR)
-	ar rcs $(LIBNAME) $(OBJ)
-
-# This rule says how to make an .o file out of a .c file
-$(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-
-# Clean objects in object directory and the library
+$(LIBFT):
+	@echo "$(YELLOW)Compiling Libft...$(NC)"
+	@$(MAKE) -C $(LIBFT_PATH)
+	
 clean:
-	rm -rf $(OBJDIR)/*.o
+	@echo "$(ORANGE)Cleaning objects ft_printf...$(NC)"
+	@$(RM) $(OBJ)
+	@rm -rf $(OBJ_DIR)
+	@$(MAKE) -C $(LIBFT_PATH) clean
+	@echo "$(GREEN)Cleaned objects ft_printf!$(NC)"
 
-fclean : clean
-	rm -f $(LIBNAME)
+fclean: clean
+	@echo "$(ORANGE)Fully cleaning ft_printf...$(NC)"
+	@$(RM) $(LIBNAME)
+	@rm -rf $(LIB_DIR)
+	@echo "$(BLUE)Fully cleaned ft_printf!$(NC)"
 
-# Rebuild everything
-re: clean all
+re: fclean all
 
-# This is a special target that tells make that 'clean' and 're' are not files
-.PHONY: all clean re
+.PHONY: all clean fclean re

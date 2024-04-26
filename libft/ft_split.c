@@ -6,11 +6,11 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:15:05 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 16:36:06 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 15:39:56 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 static char	*free_all_char(char **c)
 {

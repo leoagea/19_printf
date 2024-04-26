@@ -6,11 +6,11 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:12:24 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/18 16:36:11 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/20 15:40:05 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
