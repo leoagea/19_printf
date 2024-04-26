@@ -34,13 +34,9 @@ all:		${NAME}
 .c.o:
 			${GCC} ${CFLAGS} -c -I ${HEAD} $< -o ${<:.c=.o}
 
-${NAME}:	${OBJS}
+${NAME}:	${OBJS} ${OBJB}
 			${AR} ${NAME} ${OBJS}
-			@echo "\nCompilation libft without bonus\n"
-
-bonus:	${OBJ} ${OBJB}
-		${AR} ${NAME} $^
-		@echo "\nCompilation libft with bonus\n"
+			@echo "\nCompilation libft with bonus\n"
 
 clean:
 			rm -f ${OBJS} ${OBJB} 
