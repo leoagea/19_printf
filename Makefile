@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lagea <lagea@student.s19.be>               +#+  +:+       +#+         #
+#    By: lagea < lagea@student.s19.be >             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/26 17:35:27 by lagea             #+#    #+#              #
-#    Updated: 2024/04/26 17:48:23 by lagea            ###   ########.fr        #
+#    Updated: 2024/04/26 22:01:59 by lagea            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ CC = gcc
 RM	= rm -f
 CFLAGS = -Wall -Wextra -Werror
 INCS = -I$(INC_DIR) -I.
+LDFLAGS=-L./libft/libft
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
