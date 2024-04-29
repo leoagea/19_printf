@@ -6,12 +6,11 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:36 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/26 17:27:39 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/29 11:58:10 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-#include "../libft/libft.h"
 
 int	ft_check_next_char(const char *s, int index)
 {

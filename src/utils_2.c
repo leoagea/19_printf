@@ -6,12 +6,11 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 23:42:38 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/26 17:27:30 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/29 11:58:21 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-#include "../libft/libft.h"
 
 int	ft_print_hex_add(unsigned long n)
 {

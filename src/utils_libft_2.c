@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   utils_libft_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/23 00:27:56 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/20 15:38:56 by lagea            ###   ########.fr       */
+/*   Created: 2024/04/29 11:46:28 by lagea             #+#    #+#             */
+/*   Updated: 2024/04/29 11:58:30 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	write(fd, &c, 1);
+}
+
+int	ft_isprint(int c)
+{
+	if ((c >= 32 && c <= 126) || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
+}
+
+size_t	ft_strlen(const char *s)
+{
+	int	len;
+
+	len = 0;
+	if (!s)
+		return (0);
+	while (s[len] != '\0')
+		len++;
+	return (len);
 }

@@ -6,12 +6,11 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 13:27:07 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/26 17:27:28 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/29 11:58:26 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-#include "../libft/libft.h"
 
 int	ft_int_len(long n)
 {

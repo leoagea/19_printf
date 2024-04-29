@@ -1,6 +1,5 @@
 #include <stdio.h>  // Standard I/O
-#include "./libft/libft.h"      // For the libft header
-#include "./inc/ft_printf.h" // For the printf header
+#include "inc/ft_printf.h" // For the printf header
 
 // int main(void)
 // {
