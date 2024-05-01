@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_elements.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:27:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/30 01:07:18 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/30 13:23:38 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,17 @@
 
 int	ft_print_char(char c)
 {
-	if (ft_isascii((int)c / 255))
-		return (write(1, &c, 1));
-	return (0);
+	return (write(1, &c, 1));
 }
 
-int	ft_print_string(const char *s)
+int	ft_print_string(char *s)
 {
 	int	i;
 
-	i = -1;
+	i = 0;
 	if (!s)
 		return (write(1, "(null)", 6));
-	else if (s[0] == '\0')
-		return (0);
-	else
-	{
-		while (s[++i])
-		{
-			if (ft_isprint((char)s[i]))
-				write(1, &s[i], 1);
-			else
-				return (-1);
-		}
-	}
-	return (ft_strlen(s));
+	return (write(1, s, ft_strlen(s)));
 }
 
 int	ft_print_decimal(int n)

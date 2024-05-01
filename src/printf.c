@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:25 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/29 11:58:17 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/30 12:45:52 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *s, ...)
 	{
 		if (s[index] == '%' && ft_check_next_char(s, index))
 		{
-			temp += ft_parse_printf(s, index, arg);
+			temp += ft_parse_printf(s, index, &arg);
 			index++;
 		}
 		else

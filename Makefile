@@ -6,7 +6,7 @@
 #    By: lagea <lagea@student.s19.be>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/26 17:35:27 by lagea             #+#    #+#              #
-#    Updated: 2024/04/29 12:16:28 by lagea            ###   ########.fr        #
+#    Updated: 2024/04/30 12:44:10 by lagea            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,10 +22,9 @@ NAME = libftprintf.a
 SRC_DIR = src/
 OBJ_DIR = obj/
 INC_DIR = inc/
-LIB_DIR = lib/
 LIBNAME = $(NAME)
 
-SRC = src/printf.c src/parse.c  src/utils.c src/utils_2.c src/utils_len.c src/utils_libft.c src/utils_libft_2.c
+SRC = src/printf.c src/parse.c  src/print_elements.c src/print_elements_2.c src/utils_len.c src/utils_libft.c 
 OBJ = $(SRC:$(SRC_DIR)%.c=$(OBJ_DIR)%.o)
 
 CC = gcc
@@ -37,7 +36,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) $(INCS) -c $< -o $@
 
-all: $(LIBFT) $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "$(GREEN)Creating ft_printf library $(LIBNAME)...$(NC)"

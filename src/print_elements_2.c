@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_2.c                                          :+:      :+:    :+:   */
+/*   print_elements_2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 23:42:38 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/29 11:58:21 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/30 12:38:50 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_print_hex_add(unsigned long n)
 
 int	ft_print_add(unsigned long add)
 {
-	ft_print_string("0x");
+	write(1, "0x", 2);
 	ft_print_hex_add(add);
 	return (ft_add_len(add) + 2);
 }

@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:40:29 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/29 11:58:34 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/30 12:45:07 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	print_unb(unsigned int n, int fd)
 		print_unb(n % 10, fd);
 	}
 	else
-		ft_putchar_fd(n + '0', fd);
+		ft_print_char(n + '0');
 }
 
 void	ft_put_unbr_fd(unsigned int n, int fd)
@@ -36,13 +36,6 @@ void	ft_put_unbr_fd(unsigned int n, int fd)
 	print_unb(nbr, fd);
 }
 
-int	ft_isascii(int c)
-{
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
-}
-
 static void	print_nb(long n, int fd)
 {
 	if (n / 10)
@@ -51,7 +44,7 @@ static void	print_nb(long n, int fd)
 		print_nb(n % 10, fd);
 	}
 	else
-		ft_putchar_fd(n + '0', fd);
+		ft_print_char(n + '0');
 }
 
 void	ft_put_nbr_fd(int n, int fd)

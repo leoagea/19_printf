@@ -6,11 +6,23 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 13:27:07 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/29 11:58:26 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/30 13:22:51 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
+
+int	ft_strlen(char *s)
+{
+	int	len;
+
+	len = 0;
+	if (!s)
+		return (0);
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
 
 int	ft_int_len(long n)
 {
