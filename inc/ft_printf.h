@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:37:15 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/30 13:23:00 by lagea            ###   ########.fr       */
+/*   Updated: 2024/05/01 12:04:06 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ft_print_add(unsigned long add);
 int		ft_print_hex_add(unsigned long n);
 
 /* Utils_len */
-int	ft_strlen(char *s);
+int		ft_strlen(char *s);
 int		ft_int_len(long n);
 int		ft_add_len(unsigned long add);
 int		ft_hex_len(unsigned int hex);

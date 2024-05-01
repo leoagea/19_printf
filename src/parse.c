@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:36 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/30 12:45:42 by lagea            ###   ########.fr       */
+/*   Updated: 2024/05/01 12:03:58 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_parse_printf(const char *s, int index, va_list *par)
 	if (s[index + 1] == 'c')
 		return (ft_print_char(va_arg(*par, int)));
 	else if (s[index + 1] == 's')
-		return (ft_print_string(va_arg(*par,char *)));
+		return (ft_print_string(va_arg(*par, char *)));
 	else if (s[index + 1] == 'p')
 		return (ft_print_add(va_arg(*par, unsigned long)));
 	else if (s[index + 1] == 'd' || s[index + 1] == 'i')
