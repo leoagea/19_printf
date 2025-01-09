@@ -30,7 +30,7 @@ Some functionalities might be restricted compared to the standard version of `pr
 
 ## Project Structure
 
-- **includes/**  
+- **inc/**  
   Contains the `ft_printf.h` header, which declares all functions and data structures used.
 
 - **src/**  
